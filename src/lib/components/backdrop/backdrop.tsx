@@ -8,9 +8,9 @@ export const styles = {
     'fixed inset-0 z-40 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center',
 };
 
-export const Backdrop = React.forwardRef(function Backdrop(
-  { className, ...props }: BackdropProps,
-  ref: React.Ref<HTMLDivElement>,
+export const Backdrop = React.forwardRef<HTMLDivElement, BackdropProps>(function Backdrop(
+  { className, ...props },
+  ref,
 ): JSX.Element {
   const classes = clsx(styles.base, className);
 

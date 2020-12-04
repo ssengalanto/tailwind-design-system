@@ -25,11 +25,11 @@ export const styles = {
   },
 };
 
-export const Avatar = React.forwardRef(function Avatar(
-  { src, alt, size = 'medium', ...props }: AvatarProps,
-  ref: React.Ref<HTMLDivElement>,
+export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(function Avatar(
+  { className, src, alt, size = 'medium', ...props },
+  ref,
 ) {
-  const classes = clsx(styles.base, styles.size[size]);
+  const classes = clsx(styles.base, styles.size[size], className);
 
   return (
     <div className={classes} ref={ref} {...props}>
