@@ -19,9 +19,7 @@ describe('<Button />', () => {
     const button = screen.getByText(/Button Label/i);
     expect(button).toBeInTheDocument();
   });
-});
 
-describe('Button props', () => {
   it('props { variant: "primary" }', () => {
     setup({ variant: 'primary' });
     const button = screen.getByText(/Button Label/i);
