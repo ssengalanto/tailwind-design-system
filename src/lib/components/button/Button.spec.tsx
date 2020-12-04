@@ -58,6 +58,12 @@ describe('Button props', () => {
     expect(button).toHaveClass(styles.size.medium);
   });
 
+  it('props { disabled: true }', () => {
+    setup({ disabled: true });
+    const button = screen.getByText(/Button Label/i);
+    expect(button).toHaveClass(styles.disabled);
+  });
+
   it('props { fullWidth: true }', () => {
     setup({ fullWidth: true });
     const button = screen.getByText(/Button Label/i);

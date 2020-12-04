@@ -15,6 +15,7 @@ const Template: Story<ButtonProps> = (args) => <Button {...args}>Button Label</B
 export const Primary = Template.bind({});
 Primary.args = {
   variant: 'primary',
+  disabled: false,
 };
 
 export const Success = Template.bind({});
@@ -32,9 +33,9 @@ Danger.args = {
   variant: 'danger',
 };
 
-export const FullWidth = Template.bind({});
-FullWidth.args = {
-  fullWidth: true,
+export const Disabled = Template.bind({});
+Disabled.args = {
+  disabled: true,
 };
 
 export const Medium = Template.bind({});
@@ -45,4 +46,9 @@ Medium.args = {
 export const Small = Template.bind({});
 Small.args = {
   size: 'small',
+};
+
+export const FullWidth = Template.bind({});
+FullWidth.args = {
+  fullWidth: true,
 };
