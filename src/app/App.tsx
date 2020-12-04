@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button } from 'lib/components/button';
+import { Button } from 'lib/components';
 
 export const App: React.FC = () => (
   <div className="container h-screen mx-auto">
