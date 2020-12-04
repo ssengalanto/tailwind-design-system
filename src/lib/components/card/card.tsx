@@ -4,7 +4,7 @@ import clsx from 'clsx';
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export const styles = {
-  base: 'min-w-0 bg-white rounded-lg shadow-md',
+  base: 'min-w-0 bg-white p-5 rounded-lg shadow-md',
 };
 
 export const Card = React.forwardRef<HTMLDivElement, CardProps>(function Card(

@@ -6,15 +6,17 @@ import { Backdrop, BackdropProps } from './backdrop';
 
 const mockedProps: BackdropProps = {};
 
+const testId = 'backdrop-component';
+
 const setup = (props: Partial<BackdropProps> = {}) => {
   const setupProps = { ...mockedProps, ...props };
-  return render(<Backdrop data-testid="backdrop" {...setupProps} />);
+  return render(<Backdrop data-testid={testId} {...setupProps} />);
 };
 
 describe('<Backdrop />', () => {
   it('should render without error', () => {
     setup();
-    const backdrop = screen.getByTestId('backdrop');
+    const backdrop = screen.getByTestId(testId);
     expect(backdrop).toBeInTheDocument();
   });
 });

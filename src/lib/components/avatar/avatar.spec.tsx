@@ -10,15 +10,17 @@ const mockedProps: AvatarProps = {
   alt: '',
 };
 
+const testId = 'avatar-component';
+
 const setup = (props: Partial<AvatarProps> = {}) => {
   const setupProps = { ...mockedProps, ...props };
-  return render(<Avatar data-testid="avatar-component" {...setupProps} />);
+  return render(<Avatar data-testid={testId} {...setupProps} />);
 };
 
 describe('<Avatar />', () => {
   it('should render without error', () => {
     setup();
-    const avatar = screen.getByTestId('avatar-component');
+    const avatar = screen.getByTestId(testId);
     expect(avatar).toBeInTheDocument();
   });
 
@@ -40,19 +42,19 @@ describe('<Avatar />', () => {
 
   it('props { size: "small" }', () => {
     setup({ size: 'small' });
-    const avatar = screen.getByTestId('avatar-component');
+    const avatar = screen.getByTestId(testId);
     expect(avatar).toHaveClass(styles.size.small);
   });
 
   it('props { size: "medium" }', () => {
     setup({ size: 'medium' });
-    const avatar = screen.getByTestId('avatar-component');
+    const avatar = screen.getByTestId(testId);
     expect(avatar).toHaveClass(styles.size.medium);
   });
 
   it('props { size: "large" }', () => {
     setup({ size: 'large' });
-    const avatar = screen.getByTestId('avatar-component');
+    const avatar = screen.getByTestId(testId);
     expect(avatar).toHaveClass(styles.size.large);
   });
 });
