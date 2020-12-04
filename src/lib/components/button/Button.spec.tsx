@@ -2,7 +2,7 @@
 import React from 'react';
 import { screen, render } from '@testing-library/react';
 
-import { Button, ButtonProps, styles } from './Button';
+import { Button, ButtonProps, styles } from './button';
 
 const mockedProps: ButtonProps = {
   variant: 'primary',

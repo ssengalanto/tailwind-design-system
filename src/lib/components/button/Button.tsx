@@ -34,35 +34,31 @@ export const styles = {
   fullWidth: 'w-full',
 };
 
-export const Button = React.forwardRef(
-  (
-    {
-      children,
-      size = 'medium',
-      type = 'button',
-      variant = 'primary',
-      disabled = false,
-      fullWidth,
-      className,
-      ...props
-    }: ButtonProps,
-    ref: React.Ref<HTMLButtonElement>,
-  ): JSX.Element => (
-    <button
-      ref={ref}
-      type={type}
-      disabled={disabled}
-      className={clsx(
-        styles.base,
-        styles.transition,
-        styles.size[size],
-        disabled ? styles.disabled : styles.variant[variant],
-        { [styles.fullWidth]: fullWidth },
-        className,
-      )}
-      {...props}
-    >
+export const Button = React.forwardRef(function Button(
+  {
+    children,
+    size = 'medium',
+    type = 'button',
+    variant = 'primary',
+    disabled = false,
+    fullWidth,
+    className,
+    ...props
+  }: ButtonProps,
+  ref: React.Ref<HTMLButtonElement>,
+): JSX.Element {
+  const classes = clsx(
+    styles.base,
+    styles.transition,
+    styles.size[size],
+    disabled ? styles.disabled : styles.variant[variant],
+    { [styles.fullWidth]: fullWidth },
+    className,
+  );
+
+  return (
+    <button ref={ref} type={type} disabled={disabled} className={classes} {...props}>
       {children}
     </button>
-  ),
-);
+  );
+});
