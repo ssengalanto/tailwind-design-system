@@ -20,6 +20,9 @@
   "rules": {
     "import/named": "off",
     "no-use-before-define": "off",
+    "no-param-reassign": "off",
+    "no-shadow": "off",
+    "default-case": "off",
     "import/extensions": "off",
     "import/no-named-as-default": "off",
     "import/prefer-default-export": "off",
