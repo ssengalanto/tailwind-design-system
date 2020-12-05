@@ -41,7 +41,6 @@
       2,
       {
         "labelComponents": ["Label"],
-        "labelAttributes": ["label"],
         "controlComponents": ["Input"],
         "depth": 3
       }

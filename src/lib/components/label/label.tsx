@@ -19,10 +19,15 @@ export const styles = {
 };
 
 export const Label = React.forwardRef<HTMLLabelElement, LabelProps>(function Label(
-  { children, className, inline, ...props },
+  { children, className, inline, disabled, ...props },
   ref,
 ) {
-  const classes = clsx(styles.base, inline && styles.inline, className);
+  const classes = clsx(
+    styles.base,
+    { [styles.inline]: inline },
+    { [styles.disabled]: disabled },
+    className,
+  );
   return (
     <label className={classes} ref={ref} {...props}>
       {children}
