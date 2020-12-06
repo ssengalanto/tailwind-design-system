@@ -34,13 +34,12 @@ export interface TextFieldProps extends React.HTMLAttributes<HTMLInputElement> {
 
 export const styles = {
   base:
-    'block w-full p-2 text-sm focus:outline-none dark:text-gray-300 rounded-sm leading-5 border',
+    'block w-full mt-1 rounded-md shadow-sm dark:text-gray-300 focus:ring focus:ring-opacity-50',
   active:
-    'focus:border-primary-500 focus:ring-1 dark:ring-gray-400 dark:focus:border-gray-600 dark:bg-gray-700 border-gray-300 dark:border-gray-600',
+    'dark:bg-gray-700 border-gray-300 dark:border-gray-500 focus:border-primary-300 focus:ring-primary-200 dark:focus:ring-gray-700',
   disabled:
     'cursor-not-allowed opacity-50 bg-gray-300 dark:bg-gray-700 border-gray-400 dark:border-gray-400',
-  error:
-    'border-red-500 dark:bg-gray-700 focus:border-red-400 dark:focus:border-red-400 ring-red-300 focus:ring-1',
+  error: 'border-red-500 dark:bg-gray-700 focus:border-red-400  focus:ring-red-200 f',
 };
 
 export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
