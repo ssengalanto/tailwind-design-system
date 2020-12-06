@@ -4,3 +4,4 @@ export * from './backdrop';
 export * from './card';
 export * from './text-field';
 export * from './label';
+export * from './helper-text';

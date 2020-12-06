@@ -17,6 +17,12 @@ Default.args = {
   label: 'Default',
 };
 
+export const HelperText = Template.bind({});
+HelperText.args = {
+  label: 'Label',
+  helperText: 'Helper Text',
+};
+
 export const Disabled = Template.bind({});
 Disabled.args = {
   label: 'Disabled',
