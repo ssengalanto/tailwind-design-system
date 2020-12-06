@@ -5,9 +5,7 @@ import { screen, render } from '@testing-library/react';
 
 import { Label, LabelProps, styles } from './label';
 
-const mockedProps: LabelProps = {
-  label: 'Label',
-};
+const mockedProps: LabelProps = {};
 
 const testId = 'label-component';
 
