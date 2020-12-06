@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React, { useReducer, createContext, useContext } from 'react';
 
 import { ThemeActions } from './theme.actions';
@@ -18,7 +17,7 @@ const ThemeProvider: React.FC = ({ children }) => {
   );
 };
 
-const useThemeState = () => {
+const useThemeState = (): ThemeState => {
   const context = useContext(ThemeStateContext);
   if (context === undefined) {
     throw new Error('useThemeState must be used within a ThemeProvider');
@@ -26,7 +25,7 @@ const useThemeState = () => {
   return context;
 };
 
-const useThemeDispatch = () => {
+const useThemeDispatch = (): Dispatch => {
   const context = useContext(ThemeDispatchContext);
   if (context === undefined) {
     throw new Error('useThemeDispatch must be used within a ThemeProvider');
