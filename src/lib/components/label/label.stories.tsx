@@ -3,6 +3,7 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { Label, LabelProps } from './label';
+import { TextField } from '../text-field';
 
 export default {
   title: 'Components/Label',
@@ -10,28 +11,39 @@ export default {
   argTypes: {},
 } as Meta;
 
-// TODO: change the children with Input component
-
-const Template: Story<LabelProps> = ({ children, ...args }) => (
-  <Label {...args}>
-    <span>your label</span>
-    {children}
-  </Label>
-);
+const Template: Story<LabelProps> = ({ children, ...args }) => <Label {...args}>{children}</Label>;
 
 export const Default = Template.bind({});
 Default.args = {
-  children: <p>your children</p>,
+  label: 'Default',
+  children: <TextField />,
 };
 
 export const Inline = Template.bind({});
 Inline.args = {
-  children: <p>your children</p>,
-  disabled: true,
+  label: 'Inline',
+  // TODO: change it with checkbox
+  children: <TextField />,
+  inline: true,
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  children: <p>your children</p>,
+  label: 'Disabled',
+  children: <TextField disabled />,
   disabled: true,
+};
+
+export const Required = Template.bind({});
+Required.args = {
+  label: 'Required',
+  children: <TextField required />,
+  required: true,
+};
+
+export const Error = Template.bind({});
+Error.args = {
+  label: 'Error',
+  children: <TextField error />,
+  error: true,
 };
