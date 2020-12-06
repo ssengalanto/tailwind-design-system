@@ -3,7 +3,7 @@ import React from 'react';
 import faker from 'faker';
 import { screen, render } from '@testing-library/react';
 
-import { Checkbox, CheckboxProps } from './checkbox';
+import { Checkbox, CheckboxProps, styles } from './checkbox';
 
 const mockedProps: CheckboxProps = {};
 
@@ -19,6 +19,7 @@ describe('<Checkbox />', () => {
     setup();
     const checkbox = screen.getByTestId(testId);
 
+    expect(checkbox).toHaveClass(styles.default);
     expect(checkbox).toBeInTheDocument();
   });
 
@@ -28,5 +29,12 @@ describe('<Checkbox />', () => {
     const label = screen.getByText(text);
 
     expect(label).toBeInTheDocument();
+  });
+
+  it('props { error: true }', () => {
+    setup({ error: true });
+    const checkbox = screen.getByTestId(testId);
+
+    expect(checkbox).toHaveClass(styles.error);
   });
 });

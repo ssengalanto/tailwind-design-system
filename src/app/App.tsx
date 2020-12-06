@@ -49,7 +49,10 @@ export const App: React.FC = () => {
               <TextField required error label="Name" />
             </div>
             <div className="mt-8">
-              <Checkbox label="TailwindCSS" />
+              <Checkbox error label="TailwindCSS" />
+            </div>
+            <div className="mt-8">
+              <Checkbox label="React" />
             </div>
           </form>
         </Card>

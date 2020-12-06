@@ -22,3 +22,9 @@ Disabled.args = {
   label: 'Disabled',
   disabled: true,
 };
+
+export const Error = Template.bind({});
+Error.args = {
+  label: 'Error',
+  error: true,
+};
