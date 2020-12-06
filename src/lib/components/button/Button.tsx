@@ -4,11 +4,11 @@ import clsx from 'clsx';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
-   * The different variants of the button
+   * Defines the variant of the button
    */
   variant?: 'primary' | 'success' | 'warn' | 'danger';
   /**
-   * The size of the button
+   * Defines the size of the button
    */
   size?: 'small' | 'medium';
   /**

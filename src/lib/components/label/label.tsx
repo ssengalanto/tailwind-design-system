@@ -7,19 +7,19 @@ export interface LabelProps extends React.HTMLAttributes<HTMLLabelElement> {
    */
   inline?: boolean;
   /**
-   * Defines if the label is disabled
+   * Defines the disabled state of the label
    */
   disabled?: boolean;
   /**
-   * Defines label error state
+   * Defines the error state of the label
    */
   error?: boolean;
   /**
-   * Defines label required state
+   * Defines required state of the label
    */
   required?: boolean;
   /**
-   * The text label
+   * Defines the text content of the label
    */
   label?: string;
 }

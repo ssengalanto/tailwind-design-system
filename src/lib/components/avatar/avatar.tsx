@@ -3,15 +3,15 @@ import clsx from 'clsx';
 
 export interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
-   * The size of the avatar
+   * Defines the size of the avatar
    */
   size?: 'large' | 'medium' | 'small';
   /**
-   * Alternative text for the avatar image
+   * Defines the alt text of the img
    */
   alt?: string;
   /**
-   * The source for the avatar image
+   * Defines the src of the img
    */
   src: string;
 }
