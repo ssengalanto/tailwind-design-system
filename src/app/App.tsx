@@ -1,14 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 
-import { Avatar, Button, Card, TextField } from 'lib/components';
+import { Avatar, Button, Card, TextField, Checkbox } from 'lib/components';
 import { useTheme, setDarkTheme, setLightTheme } from 'context';
 
 export const App: React.FC = () => {
   const [{ theme }, dispatch] = useTheme();
-  const ref = useRef(null);
 
   useEffect(() => {
-    console.log(ref.current);
     if (theme === 'light') {
       document.querySelector('html')?.classList.remove('dark');
     } else {
@@ -37,18 +35,21 @@ export const App: React.FC = () => {
               temporibus laboriosam eius autem ullam?
             </p>
           </div>
-          <Button variant="primary" size="small" onClick={toggleTheme}>
+          <Button variant="danger" size="small" onClick={toggleTheme}>
             Toggle Theme
           </Button>
           <form>
             <div className="mt-8">
-              <TextField required label="Name" ref={ref} />
+              <TextField required label="Name" />
             </div>
             <div className="mt-8">
-              <TextField required disabled label="Name" />
+              <TextField required disabled label="Name" helperText="Disabled at the moment" />
             </div>
             <div className="mt-8">
               <TextField required error label="Name" />
+            </div>
+            <div className="mt-8">
+              <Checkbox label="TailwindCSS" />
             </div>
           </form>
         </Card>
