@@ -25,7 +25,7 @@ export interface LabelProps extends React.HTMLAttributes<HTMLLabelElement> {
 }
 
 export const styles = {
-  base: 'block text-sm text-gray-700 dark:text-gray-400',
+  base: 'block prose prose-sm text-gray-700 dark:text-gray-400',
   inline: 'inline-flex items-center',
   disabled: 'opacity-50 cursor-not-allowed',
   error: 'text-red-500 dark:text-red-400',

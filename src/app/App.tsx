@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { Avatar, Button, Card, TextField, Checkbox } from 'lib/components';
+import { Avatar, Button, Card, TextField, Checkbox, TextArea } from 'lib/components';
 import { useTheme, setDarkTheme, setLightTheme } from 'context';
 
 export const App: React.FC = () => {
@@ -30,7 +30,7 @@ export const App: React.FC = () => {
             <div>
               <Avatar src="https://www.zooplus.co.uk/magazine/wp-content/uploads/2018/01/Female-Dogs-in-Heat-1024x683.jpeg" />
             </div>
-            <p className="ml-8 text-left text-gray-700 dark:text-gray-400">
+            <p className="ml-8 prose-sm prose text-left text-gray-700 dark:text-gray-400">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dicta illo, minima
               temporibus laboriosam eius autem ullam?
             </p>
@@ -53,6 +53,9 @@ export const App: React.FC = () => {
             </div>
             <div className="mt-8">
               <Checkbox label="React" />
+            </div>
+            <div className="mt-8">
+              <TextArea label="Textarea" />
             </div>
           </form>
         </Card>

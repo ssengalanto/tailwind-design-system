@@ -6,3 +6,4 @@ export * from './text-field';
 export * from './label';
 export * from './helper-text';
 export * from './checkbox';
+export * from './text-area';

@@ -34,7 +34,7 @@ export interface TextFieldProps extends React.HTMLAttributes<HTMLInputElement> {
 
 export const styles = {
   base:
-    'block w-full mt-1 rounded-md shadow-sm dark:text-gray-300 focus:ring focus:ring-opacity-50',
+    'block w-full prose-sm prose mt-1 rounded-md shadow-sm dark:text-gray-300 focus:ring focus:ring-opacity-50',
   active:
     'dark:bg-gray-700 border-gray-300 dark:border-gray-500 focus:border-primary-300 focus:ring-primary-200 dark:focus:ring-gray-700',
   disabled:
