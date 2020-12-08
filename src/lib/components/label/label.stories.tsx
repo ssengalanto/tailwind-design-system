@@ -4,6 +4,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { Label, LabelProps } from './label';
 import { TextField } from '../text-field';
+import { Checkbox } from '../checkbox';
 
 export default {
   title: 'Components/Label',
@@ -22,8 +23,7 @@ Default.args = {
 export const Inline = Template.bind({});
 Inline.args = {
   label: 'Inline',
-  // TODO: change it with checkbox
-  children: <TextField />,
+  children: <Checkbox />,
   inline: true,
 };
 

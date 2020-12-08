@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
-import { Avatar, Button, Card, TextField, Checkbox, TextArea } from 'lib/components';
+import { Avatar, Button, Card, TextField, Checkbox, TextArea, Modal } from 'lib/components';
 import { useTheme, setDarkTheme, setLightTheme } from 'context';
 
 export const App: React.FC = () => {
   const [{ theme }, dispatch] = useTheme();
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     if (theme === 'light') {
@@ -56,6 +57,14 @@ export const App: React.FC = () => {
             </div>
             <div className="mt-8">
               <TextArea label="Textarea" />
+            </div>
+            <div className="mt-8">
+              <Button size="small" onClick={() => setOpen(true)}>
+                Open
+              </Button>
+              <Modal open={open} onClose={() => setOpen(false)}>
+                <TextField required label="Email" />
+              </Modal>
             </div>
           </form>
         </Card>
