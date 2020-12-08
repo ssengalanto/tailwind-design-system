@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { Avatar, Button, Card, TextField, Checkbox, TextArea, Modal } from 'lib/components';
+import { Avatar, Button, Card, TextField, Checkbox, TextArea, Modal } from 'lib/components/ui';
 import { useTheme, setDarkTheme, setLightTheme } from 'context';
 
 export const App: React.FC = () => {
