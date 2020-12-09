@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React from 'react';
-import faker from 'faker';
 import { screen, render } from '@testing-library/react';
 
 import { TextField, TextFieldProps, styles } from './text-field';
@@ -22,14 +21,6 @@ describe('<TextField />', () => {
     expect(textField).toBeInTheDocument();
   });
 
-  it('should render the label prop when provided', () => {
-    const text = faker.random.word();
-    setup({ label: text });
-    const textField = screen.getByText(text);
-
-    expect(textField).toBeInTheDocument();
-  });
-
   it('props { disabled: true }', () => {
     setup({ disabled: true });
     const textField = screen.getByTestId(testId);
@@ -42,13 +33,5 @@ describe('<TextField />', () => {
     const textField = screen.getByTestId(testId);
 
     expect(textField).toHaveClass(styles.error);
-  });
-
-  it('props { required: true }', () => {
-    const text = faker.random.word();
-    setup({ required: true, label: text });
-    const textField = screen.getByText(`${text}*`);
-
-    expect(textField).toBeInTheDocument();
   });
 });

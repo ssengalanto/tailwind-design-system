@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { Avatar, Button, Card, TextField, Checkbox, TextArea, Modal } from 'lib/components/ui';
+import { Avatar, Button, Card, TextField, Modal } from 'lib/components/ui';
 import { useTheme, setDarkTheme, setLightTheme } from 'context';
 
 export const App: React.FC = () => {
@@ -39,34 +39,14 @@ export const App: React.FC = () => {
           <Button variant="danger" size="small" onClick={toggleTheme}>
             Toggle Theme
           </Button>
-          <form>
-            <div className="mt-8">
-              <TextField required label="Name" />
-            </div>
-            <div className="mt-8">
-              <TextField required disabled label="Name" helperText="Disabled at the moment" />
-            </div>
-            <div className="mt-8">
-              <TextField required error label="Name" />
-            </div>
-            <div className="mt-8">
-              <Checkbox error label="TailwindCSS" />
-            </div>
-            <div className="mt-8">
-              <Checkbox label="React" />
-            </div>
-            <div className="mt-8">
-              <TextArea label="Textarea" />
-            </div>
-            <div className="mt-8">
-              <Button size="small" onClick={() => setOpen(true)}>
-                Open
-              </Button>
-              <Modal open={open} onClose={() => setOpen(false)}>
-                <TextField required label="Email" />
-              </Modal>
-            </div>
-          </form>
+          <div className="mt-8">
+            <Button size="small" onClick={() => setOpen(true)}>
+              Open
+            </Button>
+            <Modal open={open} onClose={() => setOpen(false)}>
+              <TextField />
+            </Modal>
+          </div>
         </Card>
       </div>
     </div>

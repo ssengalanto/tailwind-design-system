@@ -2,34 +2,11 @@
 import React from 'react';
 import clsx from 'clsx';
 
-import { Label } from '../label';
-import { HelperText } from '../helper-text';
-
-export interface TextAreaProps extends React.HTMLAttributes<HTMLTextAreaElement> {
-  /**
-   * Defines the number of rows for textarea
-   */
-  rows?: number;
+export interface TextAreaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   /**
    * Defines the error state of the textarea
    */
   error?: boolean;
-  /**
-   * Defines the disabled state of the textarea
-   */
-  disabled?: boolean;
-  /**
-   * Defines the required state of the textarea
-   */
-  required?: boolean;
-  /**
-   * Defines the label of the textarea
-   */
-  label?: string;
-  /**
-   * Defines the helper text of the textarea
-   */
-  helperText?: string;
 }
 
 export const styles = {
@@ -43,25 +20,22 @@ export const styles = {
 };
 
 export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
-  ({ error, disabled, label, className, required, helperText, rows = 3, ...props }, ref) => {
+  ({ error, disabled, className, required, rows = 3, ...props }, ref) => {
     const classes = clsx(
       styles.base,
       error ? styles.error : disabled ? styles.disabled : styles.active,
       className,
     );
     return (
-      <Label label={label} required={required} disabled={disabled} error={error}>
-        <textarea
-          className={classes}
-          ref={ref}
-          rows={rows}
-          autoComplete="nope"
-          disabled={disabled}
-          required={required}
-          {...props}
-        />
-        {helperText ? <HelperText error={error}>{helperText}</HelperText> : null}
-      </Label>
+      <textarea
+        className={classes}
+        ref={ref}
+        rows={rows}
+        autoComplete="nope"
+        disabled={disabled}
+        required={required}
+        {...props}
+      />
     );
   },
 );

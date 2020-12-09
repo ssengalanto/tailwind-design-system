@@ -13,30 +13,19 @@ export default {
 const Template: Story<TextFieldProps> = (args) => <TextField {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {
-  label: 'Default',
-};
-
-export const HelperText = Template.bind({});
-HelperText.args = {
-  label: 'Label',
-  helperText: 'Helper Text',
-};
+Default.args = {};
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  label: 'Disabled',
   disabled: true,
 };
 
 export const Required = Template.bind({});
 Required.args = {
-  label: 'Required',
   required: true,
 };
 
 export const Error = Template.bind({});
 Error.args = {
-  label: 'Error',
   error: true,
 };
