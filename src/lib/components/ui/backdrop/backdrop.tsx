@@ -1,7 +1,8 @@
 import React from 'react';
 import clsx from 'clsx';
+import { HTMLMotionProps, motion } from 'framer-motion';
 
-export interface BackdropProps extends React.HTMLAttributes<HTMLDivElement> {}
+export interface BackdropProps extends HTMLMotionProps<'div'> {}
 
 export const styles = {
   base:
@@ -14,5 +15,14 @@ export const Backdrop = React.forwardRef<HTMLDivElement, BackdropProps>(function
 ): JSX.Element {
   const classes = clsx(styles.base, className);
 
-  return <div className={classes} ref={ref} {...props} />;
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className={classes}
+      ref={ref}
+      {...props}
+    />
+  );
 });

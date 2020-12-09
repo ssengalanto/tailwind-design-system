@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React from 'react';
 import { screen, render } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 
 import { MockComponent, mockComponentTestId } from 'lib/test-utils';
 
@@ -38,14 +37,5 @@ describe('<Modal />', () => {
   it('props { open: false }', () => {
     const modal = screen.queryByRole('dialog');
     expect(modal).not.toBeInTheDocument();
-  });
-
-  it('it should call onClose prop when the close button is clicked', () => {
-    setup({ open: true });
-    const button = screen.getByRole('button', { name: /close/i });
-
-    userEvent.click(button);
-
-    expect(mockedProps.onClose).toHaveBeenCalledTimes(1);
   });
 });

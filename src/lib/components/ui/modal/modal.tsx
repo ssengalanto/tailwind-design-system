@@ -1,12 +1,18 @@
 import React, { useEffect, useRef } from 'react';
+import clsx from 'clsx';
 import Portal from '@reach/portal';
 import FocusLock from 'react-focus-lock';
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import { motion, HTMLMotionProps, AnimatePresence } from 'framer-motion';
 
 import { Backdrop } from '../backdrop';
-import { Card } from '../card';
 
-export interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
+export const styles = {
+  base: 'min-w-0 bg-white p-5 rounded-lg shadow-md',
+  default: 'bg-white dark:bg-gray-800',
+};
+
+export interface ModalProps extends HTMLMotionProps<'div'> {
   /**
    * A function prop to close the modal when backdrop or close button is clicked
    */
@@ -18,10 +24,11 @@ export interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export const Modal = React.forwardRef<HTMLDivElement, ModalProps>(function Modal(
-  { onClose, open, children, ...props },
+  { onClose, open, children, className, ...props },
   ref,
 ) {
   const backdropRef = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const classes = clsx(styles.base, styles.default, className);
 
   useEffect(() => {
     if (backdropRef.current) {
@@ -38,38 +45,24 @@ export const Modal = React.forwardRef<HTMLDivElement, ModalProps>(function Modal
 
   return (
     <Portal>
-      {open ? (
-        <Backdrop ref={backdropRef} onClick={onClose}>
-          <Card role="dialog" ref={ref} onClick={(e) => e.stopPropagation()} {...props}>
-            <FocusLock returnFocus>
-              <header className="flex justify-end">
-                {/* TODO: replace svg with standard icons */}
-                <button
-                  type="button"
-                  className="inline-flex items-center justify-center w-6 h-6 text-gray-400 transition-colors duration-150 rounded dark:hover:text-gray-200 hover: hover:text-gray-700"
-                  aria-label="close"
-                  onClick={onClose}
-                >
-                  <svg
-                    className="w-4 h-4"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    role="img"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                      fillRule="evenodd"
-                    />
-                  </svg>
-                </button>
-              </header>
-              {children}
-            </FocusLock>
-          </Card>
-        </Backdrop>
-      ) : null}
+      <AnimatePresence>
+        {open ? (
+          <Backdrop ref={backdropRef} onClick={onClose}>
+            <motion.div
+              role="dialog"
+              onClick={(e) => e.stopPropagation()}
+              className={classes}
+              ref={ref}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0 }}
+              {...props}
+            >
+              <FocusLock returnFocus>{children}</FocusLock>
+            </motion.div>
+          </Backdrop>
+        ) : null}
+      </AnimatePresence>
     </Portal>
   );
 });
