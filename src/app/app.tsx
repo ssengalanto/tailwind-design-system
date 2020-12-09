@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { Avatar, Button, Card, TextField, Modal } from 'lib/components/ui';
+import { Avatar, Button, Card, TextField, Modal, FormControl } from 'lib/components/ui';
 import { useTheme, setDarkTheme, setLightTheme } from 'context';
 
 export const App: React.FC = () => {
@@ -44,7 +44,12 @@ export const App: React.FC = () => {
               Open
             </Button>
             <Modal open={open} onClose={() => setOpen(false)}>
-              <TextField />
+              <FormControl label="Email Address">
+                <TextField />
+              </FormControl>
+              <FormControl label="Password" helperText="Sample helper text">
+                <TextField type="password" />
+              </FormControl>
             </Modal>
           </div>
         </Card>
