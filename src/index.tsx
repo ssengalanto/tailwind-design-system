@@ -1,6 +1,8 @@
+import './styles/tailwind.css';
+import 'focus-visible/dist/focus-visible.js';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/tailwind.css';
 
 import { App } from 'app';
 import { ThemeProvider } from 'context';
