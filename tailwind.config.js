@@ -22,6 +22,9 @@ module.exports = {
           900: '#111230',
         },
       },
+      fontFamily: {
+        sans: ['Graphik', 'sans-serif'],
+      },
     },
   },
   variants: {

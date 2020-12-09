@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Graphik, sans-serif';
+    src: url(../assets/fonts/GraphikRegular.otf);
+  }
+
+  @font-face {
+    font-family: 'Graphik, sans-serif';
+    src: url(../assets/fonts/GraphikMedium.otf);
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: 'Graphik, sans-serif';
+    src: url(../assets/fonts/GraphikSemibold.otf);
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: 'Graphik, sans-serif';
+    src: url(../assets/fonts/GraphikBold.otf);
+    font-weight: 700;
+  }
+}
