@@ -7,7 +7,7 @@ import { TextField } from '../text-field';
 import { Checkbox } from '../checkbox';
 
 export default {
-  title: 'Components/Label',
+  title: 'UI/Label',
   component: Label,
   argTypes: {},
 } as Meta;

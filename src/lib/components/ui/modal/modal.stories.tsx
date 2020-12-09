@@ -5,7 +5,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { Modal, ModalProps } from './modal';
 
 export default {
-  title: 'Components/Modal',
+  title: 'UI/Modal',
   component: Modal,
   argTypes: {},
 } as Meta;

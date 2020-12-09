@@ -5,7 +5,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { Checkbox, CheckboxProps } from './checkbox';
 
 export default {
-  title: 'Components/Checkbox',
+  title: 'UI/Checkbox',
   component: Checkbox,
   argTypes: {},
 } as Meta;

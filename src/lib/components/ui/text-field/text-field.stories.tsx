@@ -5,7 +5,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { TextField, TextFieldProps } from './text-field';
 
 export default {
-  title: 'Components/TextField',
+  title: 'UI/TextField',
   component: TextField,
   argTypes: {},
 } as Meta;

@@ -5,7 +5,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { HelperText, HelperTextProps } from './helper-text';
 
 export default {
-  title: 'Components/HelperText',
+  title: 'UI/HelperText',
   component: HelperText,
   argTypes: {},
 } as Meta;
