@@ -19,7 +19,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 
 export const styles = {
   base:
-    'inline-block prose prose-sm rounded-md focus:outline-none focus:ring focus:ring-opacity-50',
+    'inline-block prose prose-sm rounded-md focus:outline-none focus-visible:ring focus-visible:ring-opacity-50',
   transition: 'transition duration-300 ease-in-out',
   variant: {
     primary: 'bg-primary-500 text-white hover:bg-primary-600 ring-primary-200',
