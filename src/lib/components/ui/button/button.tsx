@@ -2,21 +2,6 @@
 import React from 'react';
 import clsx from 'clsx';
 
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  /**
-   * Defines the variant of the button
-   */
-  variant?: 'primary' | 'success' | 'warn' | 'danger';
-  /**
-   * Defines the size of the button
-   */
-  size?: 'small' | 'medium';
-  /**
-   * Display the button as full width
-   */
-  fullWidth?: boolean;
-}
-
 export const styles = {
   base:
     'inline-block prose prose-sm rounded-md focus:outline-none focus-visible:ring focus-visible:ring-opacity-50',
@@ -34,6 +19,21 @@ export const styles = {
   },
   fullWidth: 'w-full',
 };
+
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  /**
+   * Defines the variant of the button
+   */
+  variant?: keyof typeof styles.variant;
+  /**
+   * Defines the size of the button
+   */
+  size?: keyof typeof styles.size;
+  /**
+   * Display the button as full width
+   */
+  fullWidth?: boolean;
+}
 
 export const Button = React.forwardRef(function Button(
   {

@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .text-base {
+    @apply text-gray-700 dark:text-gray-400;
+  }
+
+  .text-base-primary {
+    @apply text-primary-500 dark:text-primary-200;
+  }
+
+  .text-base-error {
+    @apply text-red-600 dark:text-red-400;
+  }
+
+  .bg-base {
+    @apply bg-white dark:bg-gray-800;
+  }
+}
+
 @layer base {
   @font-face {
     font-family: 'Graphik, sans-serif';
