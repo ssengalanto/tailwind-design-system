@@ -19,7 +19,7 @@ export const styles = {
   error: 'border-red-500 dark:bg-gray-700 focus:border-red-400  focus:ring-red-200 f',
 };
 
-export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
+const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
   ({ error, disabled, className, required, rows = 3, ...props }, ref) => {
     const classes = clsx(
       styles.base,
@@ -39,3 +39,5 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
     );
   },
 );
+
+export default React.memo(TextArea);

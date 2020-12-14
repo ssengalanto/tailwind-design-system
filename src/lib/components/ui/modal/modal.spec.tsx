@@ -4,7 +4,7 @@ import { screen, render } from '@testing-library/react';
 
 import { MockComponent, mockComponentTestId } from 'lib/test-utils';
 
-import { Modal, ModalProps } from './modal';
+import Modal, { ModalProps } from './modal';
 
 const mockedProps: ModalProps = {
   open: false,

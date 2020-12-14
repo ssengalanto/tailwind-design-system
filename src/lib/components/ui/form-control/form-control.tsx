@@ -26,7 +26,7 @@ export interface FormControlProps extends React.HTMLAttributes<HTMLDivElement> {
   helperText?: string;
 }
 
-export const FormControl = React.forwardRef<HTMLInputElement, FormControlProps>(
+const FormControl = React.forwardRef<HTMLInputElement, FormControlProps>(
   ({ error, disabled, label, children, required, helperText, ...props }, ref) => (
     <div ref={ref} {...props}>
       <Label label={label} required={required} disabled={disabled} error={error}>
@@ -36,3 +36,5 @@ export const FormControl = React.forwardRef<HTMLInputElement, FormControlProps>(
     </div>
   ),
 );
+
+export default React.memo(FormControl);

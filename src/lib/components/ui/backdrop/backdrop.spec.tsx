@@ -2,7 +2,7 @@
 import React from 'react';
 import { screen, render } from '@testing-library/react';
 
-import { Backdrop, BackdropProps } from './backdrop';
+import Backdrop, { BackdropProps } from './backdrop';
 
 const mockedProps: BackdropProps = {};
 

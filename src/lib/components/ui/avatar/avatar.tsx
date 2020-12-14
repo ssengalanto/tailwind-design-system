@@ -25,7 +25,7 @@ export const styles = {
   },
 };
 
-export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(function Avatar(
+const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(function Avatar(
   { className, src, alt, size = 'medium', ...props },
   ref,
 ) {
@@ -38,3 +38,5 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(function Ava
     </div>
   );
 });
+
+export default React.memo(Avatar);

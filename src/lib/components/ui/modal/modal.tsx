@@ -1,6 +1,4 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import React, { useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import clsx from 'clsx';
 import Portal from '@reach/portal';
 import FocusLock from 'react-focus-lock';
@@ -26,18 +24,21 @@ export interface ModalProps extends CardProps {
   open: boolean;
 }
 
-export const Modal = React.forwardRef<HTMLDivElement, ModalProps>(function Modal(
+const Modal = React.forwardRef<HTMLDivElement, ModalProps>(function Modal(
   { onClose, open, children, className, ...props },
   ref,
 ) {
   const backdropRef = useRef() as React.MutableRefObject<HTMLDivElement>;
   const classes = clsx(styles.base, styles.default, className);
 
-  const handleEsc: React.KeyboardEventHandler<HTMLDivElement> = (e) => {
-    if (e.key === 'Esc' || e.key === 'Escape') {
-      onClose();
-    }
-  };
+  const handleEsc: React.KeyboardEventHandler<HTMLDivElement> = useCallback(
+    (e) => {
+      if (e.key === 'Esc' || e.key === 'Escape') {
+        onClose();
+      }
+    },
+    [onClose],
+  );
 
   useEffect(() => {
     if (backdropRef.current) {
@@ -78,3 +79,5 @@ export const Modal = React.forwardRef<HTMLDivElement, ModalProps>(function Modal
     </Portal>
   );
 });
+
+export default React.memo(Modal);

@@ -4,7 +4,7 @@ import { screen, render } from '@testing-library/react';
 
 import { MockComponent, mockComponentTestId } from 'lib/test-utils';
 
-import { ShowIf, ShowIfProps } from './show-if';
+import ShowIf, { ShowIfProps } from './show-if';
 
 const mockedProps: ShowIfProps = {
   condition: false,

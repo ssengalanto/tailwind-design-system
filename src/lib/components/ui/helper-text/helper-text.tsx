@@ -18,7 +18,7 @@ export const styles = {
   disabled: 'opacity-50',
 };
 
-export const HelperText = React.forwardRef<HTMLSpanElement, HelperTextProps>(function HelperText(
+const HelperText = React.forwardRef<HTMLSpanElement, HelperTextProps>(function HelperText(
   { className, error, disabled, ...props },
   ref,
 ) {
@@ -30,3 +30,5 @@ export const HelperText = React.forwardRef<HTMLSpanElement, HelperTextProps>(fun
   );
   return <span className={classes} ref={ref} {...props} />;
 });
+
+export default React.memo(HelperText);

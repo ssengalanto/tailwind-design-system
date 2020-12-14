@@ -3,7 +3,7 @@ import React from 'react';
 import faker from 'faker';
 import { screen, render } from '@testing-library/react';
 
-import { Avatar, AvatarProps, styles } from './avatar';
+import Avatar, { AvatarProps, styles } from './avatar';
 
 const mockedProps: AvatarProps = {
   src: '',

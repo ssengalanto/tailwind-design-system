@@ -2,7 +2,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { Backdrop, BackdropProps } from './backdrop';
+import Backdrop, { BackdropProps } from './backdrop';
 
 export default {
   title: 'UI/Backdrop',

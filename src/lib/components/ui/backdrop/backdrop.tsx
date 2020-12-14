@@ -9,7 +9,7 @@ export const styles = {
     'fixed inset-0 z-40 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center',
 };
 
-export const Backdrop = React.forwardRef<HTMLDivElement, BackdropProps>(function Backdrop(
+const Backdrop = React.forwardRef<HTMLDivElement, BackdropProps>(function Backdrop(
   { className, ...props },
   ref,
 ): JSX.Element {
@@ -21,3 +21,5 @@ export const Backdrop = React.forwardRef<HTMLDivElement, BackdropProps>(function
     </motion.div>
   );
 });
+
+export default React.memo(Backdrop);

@@ -3,7 +3,7 @@ import React from 'react';
 import faker from 'faker';
 import { screen, render } from '@testing-library/react';
 
-import { Checkbox, CheckboxProps, styles } from './checkbox';
+import Checkbox, { CheckboxProps, styles } from './checkbox';
 
 const mockedProps: CheckboxProps = {};
 

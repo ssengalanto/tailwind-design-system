@@ -3,7 +3,7 @@ import React from 'react';
 import faker from 'faker';
 import { screen, render } from '@testing-library/react';
 
-import { Label, LabelProps, styles } from './label';
+import Label, { LabelProps, styles } from './label';
 
 const mockedProps: LabelProps = {};
 

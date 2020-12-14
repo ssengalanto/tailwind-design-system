@@ -2,7 +2,7 @@
 import React from 'react';
 import { screen, render } from '@testing-library/react';
 
-import { SvgIcon, SvgIconProps, styles } from './svg-icon';
+import SvgIcon, { SvgIconProps, styles } from './svg-icon';
 
 const mockedProps: SvgIconProps = {
   children: (

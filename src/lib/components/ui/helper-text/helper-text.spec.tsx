@@ -3,7 +3,7 @@ import React from 'react';
 import faker from 'faker';
 import { screen, render } from '@testing-library/react';
 
-import { HelperText, HelperTextProps, styles } from './helper-text';
+import HelperText, { HelperTextProps, styles } from './helper-text';
 
 const mockedProps: HelperTextProps = {};
 

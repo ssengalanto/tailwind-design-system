@@ -2,7 +2,7 @@
 import React from 'react';
 import { screen, render } from '@testing-library/react';
 
-import { TextField, TextFieldProps, styles } from './text-field';
+import TextField, { TextFieldProps, styles } from './text-field';
 
 const mockedProps: TextFieldProps = {};
 

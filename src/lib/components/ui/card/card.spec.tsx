@@ -4,7 +4,7 @@ import { screen, render } from '@testing-library/react';
 
 import { MockComponent, mockComponentTestId } from 'lib/test-utils';
 
-import { Card, CardProps } from './card';
+import Card, { CardProps } from './card';
 
 const mockedProps: CardProps = {};
 

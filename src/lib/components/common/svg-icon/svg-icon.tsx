@@ -41,4 +41,4 @@ const SvgIcon = React.forwardRef<SVGSVGElement, SvgIconProps>(
   },
 );
 
-export { SvgIcon };
+export default React.memo(SvgIcon);

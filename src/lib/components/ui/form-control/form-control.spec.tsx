@@ -3,7 +3,7 @@ import React from 'react';
 import faker from 'faker';
 import { screen, render } from '@testing-library/react';
 
-import { FormControl, FormControlProps } from './form-control';
+import FormControl, { FormControlProps } from './form-control';
 import { TextField } from '../text-field';
 
 const mockedProps: FormControlProps = {};

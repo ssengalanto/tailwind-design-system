@@ -29,7 +29,7 @@ export interface AccordionProps extends React.HTMLAttributes<HTMLDivElement> {
   onExpand: (payload: number | boolean) => void;
 }
 
-const Component = React.forwardRef<HTMLDivElement, AccordionProps>(function Accordion(
+const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(function Accordion(
   { i, expanded, header, onExpand, children, ...props },
   ref,
 ) {
@@ -83,4 +83,4 @@ const Component = React.forwardRef<HTMLDivElement, AccordionProps>(function Acco
   );
 });
 
-export const Accordion = React.memo(Component);
+export default React.memo(Accordion);

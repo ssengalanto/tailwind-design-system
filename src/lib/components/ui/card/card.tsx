@@ -8,7 +8,7 @@ export const styles = {
   default: 'bg-white dark:bg-gray-800',
 };
 
-export const Card = React.forwardRef<HTMLDivElement, CardProps>(function Card(
+const Card = React.forwardRef<HTMLDivElement, CardProps>(function Card(
   { className, ...props },
   ref,
 ) {
@@ -16,3 +16,5 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(function Card(
 
   return <div className={classes} ref={ref} {...props} />;
 });
+
+export default React.memo(Card);

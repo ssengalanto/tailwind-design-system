@@ -2,7 +2,7 @@
 import React from 'react';
 import { screen, render } from '@testing-library/react';
 
-import { TextArea, TextAreaProps, styles } from './text-area';
+import TextArea, { TextAreaProps, styles } from './text-area';
 
 const mockedProps: TextAreaProps = {};
 
