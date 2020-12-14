@@ -44,16 +44,16 @@ describe('<Button />', () => {
     expect(button).toHaveClass(styles.variant.danger);
   });
 
-  it('props { size: "small" }', () => {
-    setup({ size: 'small' });
+  it('props { size: "sm" }', () => {
+    setup({ size: 'sm' });
     const button = screen.getByText(/Button Label/i);
-    expect(button).toHaveClass(styles.size.small);
+    expect(button).toHaveClass(styles.size.sm);
   });
 
-  it('props { size: "medium" }', () => {
-    setup({ size: 'medium' });
+  it('props { size: "md" }', () => {
+    setup({ size: 'md' });
     const button = screen.getByText(/Button Label/i);
-    expect(button).toHaveClass(styles.size.medium);
+    expect(button).toHaveClass(styles.size.md);
   });
 
   it('props { disabled: true }', () => {

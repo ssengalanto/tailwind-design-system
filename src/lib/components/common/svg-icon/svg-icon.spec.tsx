@@ -56,24 +56,31 @@ describe('<SvgIcon />', () => {
     expect(svg).toHaveClass(styles.variant.inverse);
   });
 
-  it('props { size: "small" }', () => {
-    setup({ size: 'small' });
+  it('props { size: "sm" }', () => {
+    setup({ size: 'sm' });
     const svg = screen.getByTestId(testId);
 
-    expect(svg).toHaveClass(styles.size.small);
+    expect(svg).toHaveClass(styles.size.sm);
   });
 
-  it('props { size: "medium" }', () => {
-    setup({ size: 'medium' });
+  it('props { size: "sm" }', () => {
+    setup({ size: 'sm' });
     const svg = screen.getByTestId(testId);
 
-    expect(svg).toHaveClass(styles.size.medium);
+    expect(svg).toHaveClass(styles.size.sm);
   });
 
-  it('props { size: "large" }', () => {
-    setup({ size: 'large' });
+  it('props { size: "md" }', () => {
+    setup({ size: 'md' });
     const svg = screen.getByTestId(testId);
 
-    expect(svg).toHaveClass(styles.size.large);
+    expect(svg).toHaveClass(styles.size.md);
+  });
+
+  it('props { size: "lg" }', () => {
+    setup({ size: 'lg' });
+    const svg = screen.getByTestId(testId);
+
+    expect(svg).toHaveClass(styles.size.lg);
   });
 });

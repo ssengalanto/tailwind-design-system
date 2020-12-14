@@ -9,9 +9,10 @@ export const styles = {
     inverse: 'text-white',
   },
   size: {
-    small: 'h-5 w-5',
-    medium: 'h-6 h-6',
-    large: 'h-8 w-8',
+    xs: 'h4 w-4',
+    sm: 'h-5 w-5',
+    md: 'h-6 h-6',
+    lg: 'h-8 w-8',
   },
 };
 
@@ -28,7 +29,7 @@ export interface SvgIconProps extends React.ComponentPropsWithoutRef<'svg'> {
 
 const SvgIcon = React.forwardRef<SVGSVGElement, SvgIconProps>(
   (
-    { children, viewBox = '0 0 24 24', className, size = 'small', variant = 'default', ...props },
+    { children, viewBox = '0 0 24 24', className, size = 'sm', variant = 'default', ...props },
     ref,
   ) => {
     const classes = clsx(styles.base, styles.size[size], styles.variant[variant], className);

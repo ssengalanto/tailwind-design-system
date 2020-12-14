@@ -40,21 +40,21 @@ describe('<Avatar />', () => {
     expect(img).toHaveAttribute('src', src);
   });
 
-  it('props { size: "small" }', () => {
-    setup({ size: 'small' });
+  it('props { size: "sm" }', () => {
+    setup({ size: 'sm' });
     const avatar = screen.getByTestId(testId);
-    expect(avatar).toHaveClass(styles.size.small);
+    expect(avatar).toHaveClass(styles.size.sm);
   });
 
-  it('props { size: "medium" }', () => {
-    setup({ size: 'medium' });
+  it('props { size: "md" }', () => {
+    setup({ size: 'md' });
     const avatar = screen.getByTestId(testId);
-    expect(avatar).toHaveClass(styles.size.medium);
+    expect(avatar).toHaveClass(styles.size.md);
   });
 
-  it('props { size: "large" }', () => {
-    setup({ size: 'large' });
+  it('props { size: "lg" }', () => {
+    setup({ size: 'lg' });
     const avatar = screen.getByTestId(testId);
-    expect(avatar).toHaveClass(styles.size.large);
+    expect(avatar).toHaveClass(styles.size.lg);
   });
 });

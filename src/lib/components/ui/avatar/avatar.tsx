@@ -1,11 +1,20 @@
 import React from 'react';
 import clsx from 'clsx';
 
+export const styles = {
+  base: 'relative rounded-full inline-block',
+  size: {
+    sm: 'w-8 h-8',
+    md: 'w-20 h-20',
+    lg: 'w-28 h-28',
+  },
+};
+
 export interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
    * Defines the size of the avatar
    */
-  size?: 'large' | 'medium' | 'small';
+  size?: keyof typeof styles.size;
   /**
    * Defines the alt text of the img
    */
@@ -16,17 +25,8 @@ export interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
   src: string;
 }
 
-export const styles = {
-  base: 'relative rounded-full inline-block',
-  size: {
-    large: 'w-28 h-28',
-    medium: 'w-20 h-20',
-    small: 'w-8 h-8',
-  },
-};
-
 const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(function Avatar(
-  { className, src, alt, size = 'medium', ...props },
+  { className, src, alt, size = 'md', ...props },
   ref,
 ) {
   const classes = clsx(styles.base, styles.size[size], className);

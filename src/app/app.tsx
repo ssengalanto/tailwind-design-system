@@ -36,11 +36,11 @@ export const App: React.FC = () => {
               temporibus laboriosam eius autem ullam?
             </p>
           </div>
-          <Button variant="danger" size="small" onClick={toggleTheme}>
+          <Button variant="danger" size="sm" onClick={toggleTheme}>
             Toggle Theme
           </Button>
           <div className="mt-8">
-            <Button size="small" onClick={() => setOpen(true)}>
+            <Button size="sm" onClick={() => setOpen(true)}>
               Open
             </Button>
             <Modal open={open} onClose={() => setOpen(false)}>

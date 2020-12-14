@@ -4,15 +4,15 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { SvgIconProps } from 'lib/components/common';
 
-import { ChevronUp } from './chevron-up';
+import { Search } from './search';
 
 export default {
-  title: 'Icons/ChevronUp',
-  component: ChevronUp,
+  title: 'Icons/Search',
+  component: Search,
   argTypes: {},
 } as Meta;
 
-const Template: Story<SvgIconProps> = (args) => <ChevronUp {...args} />;
+const Template: Story<SvgIconProps> = (args) => <Search {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

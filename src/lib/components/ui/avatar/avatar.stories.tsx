@@ -21,17 +21,17 @@ Default.args = {};
 export const Small = Template.bind({});
 Small.args = {
   alt: 'Small Avatar',
-  size: 'small',
+  size: 'sm',
 };
 
 export const Medium = Template.bind({});
 Medium.args = {
   alt: 'Medium Avatar',
-  size: 'medium',
+  size: 'md',
 };
 
 export const Large = Template.bind({});
 Large.args = {
   alt: 'Large Avatar',
-  size: 'large',
+  size: 'lg',
 };

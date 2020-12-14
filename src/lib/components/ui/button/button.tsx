@@ -14,8 +14,8 @@ export const styles = {
   },
   disabled: 'bg-gray-200 cursor-not-allowed',
   size: {
-    small: 'py-2 px-6',
-    medium: 'py-4 px-8',
+    sm: 'py-2 px-6',
+    md: 'py-4 px-8',
   },
   fullWidth: 'w-full',
 };
@@ -35,18 +35,18 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   fullWidth?: boolean;
 }
 
-const Button = React.forwardRef(function Button(
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   {
     children,
-    size = 'medium',
+    size = 'md',
     type = 'button',
     variant = 'primary',
     disabled = false,
     fullWidth,
     className,
     ...props
-  }: ButtonProps,
-  ref: React.Ref<HTMLButtonElement>,
+  },
+  ref,
 ): JSX.Element {
   const classes = clsx(
     styles.base,

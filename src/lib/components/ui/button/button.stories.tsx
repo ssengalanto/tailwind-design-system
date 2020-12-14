@@ -40,12 +40,12 @@ Disabled.args = {
 
 export const Medium = Template.bind({});
 Medium.args = {
-  size: 'medium',
+  size: 'md',
 };
 
 export const Small = Template.bind({});
 Small.args = {
-  size: 'small',
+  size: 'sm',
 };
 
 export const FullWidth = Template.bind({});
