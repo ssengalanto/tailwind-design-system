@@ -99,6 +99,7 @@
     "postcss-focus-visible": "^5.0.0",
     "postcss-import": "^12",
     "prettier": "^2.2.1",
+    "react-test-renderer": "^17.0.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }
