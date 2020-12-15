@@ -12,10 +12,8 @@ export default {
   argTypes: {},
 } as Meta;
 
-const Template: Story<IconButtonProps> = (args) => (
-  <IconButton {...args}>
-    <Search variant="inverse" />
-  </IconButton>
+const Template: Story<IconButtonProps> = ({ icon = <Search variant="inverse" />, ...args }) => (
+  <IconButton icon={icon} {...args} />
 );
 
 export const Primary = Template.bind({});

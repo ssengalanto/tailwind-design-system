@@ -9,7 +9,7 @@ import IconButton, { IconButtonProps, styles } from './icon-button';
 
 const mockedProps: IconButtonProps = {
   variant: 'primary',
-  children: <Search data-testid="search-icon" />,
+  icon: <Search data-testid="search-icon" />,
 };
 
 const setup = (props: Partial<IconButtonProps> = {}) => {

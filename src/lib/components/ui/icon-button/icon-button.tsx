@@ -21,7 +21,8 @@ export const styles = {
   },
 };
 
-export interface IconButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IconButtonProps
+  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'children'> {
   /**
    * Defines the variant of the button
    */
@@ -31,19 +32,19 @@ export interface IconButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEl
    */
   size?: keyof typeof styles.size;
   /**
-   * Custom children type to force SvgIcon
+   * The icon that will be rendered, must use icons created through SvgIcon component
    */
-  children: React.ReactElement<React.ComponentProps<typeof SvgIcon>>;
+  icon: React.ReactElement<React.ComponentProps<typeof SvgIcon>>;
 }
 
 const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(function Button(
   {
-    children,
     size = 'xs',
     type = 'button',
     variant = 'primary',
     disabled = false,
     className,
+    icon,
     ...props
   },
   ref,
@@ -58,14 +59,10 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(function
 
   return (
     <button ref={ref} type={type} disabled={disabled} className={classes} {...props}>
-      {React.Children.map(
-        children,
-        (child: React.ReactElement<React.ComponentProps<typeof SvgIcon>>) =>
-          React.cloneElement(child, {
-            size,
-            variant: disabled ? 'default' : child.props.variant,
-          }),
-      )}
+      {React.cloneElement(icon, {
+        size,
+        variant: disabled ? 'default' : icon.props.variant,
+      })}
     </button>
   );
 });
