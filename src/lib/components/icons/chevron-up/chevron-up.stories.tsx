@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { SvgIconProps } from 'lib/components/common';
 
-import { ChevronUp } from './chevron-up';
+import ChevronUp from './chevron-up';
 
 export default {
   title: 'Icons/ChevronUp',

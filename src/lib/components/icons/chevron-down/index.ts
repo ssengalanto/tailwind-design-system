@@ -1,1 +1,1 @@
-export { ChevronDown } from './chevron-down';
+export { default as ChevronDown } from './chevron-down';

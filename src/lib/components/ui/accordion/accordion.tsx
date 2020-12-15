@@ -5,9 +5,9 @@ import { ChevronDown, ChevronRight } from 'lib/components/icons';
 
 const styles = {
   container: 'my-1 prose-sm prose',
-  button:
-    'flex items-center justify-start px-5 py-2 font-medium border-black rounded-none text-primary-500 dark:text-white bg-primary-100 dark:bg-primary-500 focus:outline-none focus-visible:ring focus-visible:ring-opacity-50 ring-primary-100',
-  section: 'p-5 prose-sm prose dark:bg-primary-100 dark:text-primary-500',
+  title:
+    'flex items-center justify-start w-full px-5 py-2 font-medium border-black rounded-none text-primary-500 dark:text-white bg-primary-100 dark:bg-primary-500 focus:outline-none focus-visible:ring focus-visible:ring-opacity-50 ring-primary-100',
+  content: 'p-5 prose-sm prose dark:bg-primary-100 dark:text-primary-500',
 };
 
 export interface AccordionComponentProps extends React.HTMLAttributes<HTMLButtonElement> {
@@ -42,7 +42,7 @@ export const AccordionComponent = React.forwardRef<HTMLButtonElement, AccordionC
             id={`accordion-title-${i}`}
             aria-expanded={isOpen}
             tabIndex={0}
-            className="flex items-center justify-start w-full px-5 py-2 font-medium border-black rounded-none text-primary-500 dark:text-white bg-primary-100 dark:bg-primary-500 focus:outline-none focus-visible:ring focus-visible:ring-opacity-50 ring-primary-100"
+            className={styles.title}
             onClick={() => onExpand(isOpen ? false : i)}
             ref={ref}
             {...props}
@@ -67,7 +67,7 @@ export const AccordionComponent = React.forwardRef<HTMLButtonElement, AccordionC
               transition={{ duration: 0.6, ease: [0.04, 0.62, 0.23, 0.98] }}
             >
               <div
-                className={styles.section}
+                className={styles.content}
                 id={`accordion-content-${i}`}
                 aria-hidden={!isOpen}
                 aria-labelledby={`accordion-title-${i}`}

@@ -1,1 +1,1 @@
-export { ChevronRight } from './chevron-right';
+export { default as ChevronRight } from './chevron-right';
