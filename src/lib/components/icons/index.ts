@@ -11,3 +11,5 @@ export * from './add';
 export * from './bell';
 export * from './calendar';
 export * from './check';
+export * from './clock';
+export * from './edit';
