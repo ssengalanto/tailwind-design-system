@@ -5,9 +5,9 @@ import { screen, render } from '@testing-library/react';
 
 import { MockComponent, mockComponentTestId } from 'lib/test-utils';
 
-import Accordion, { AccordionProps } from './accordion';
+import { AccordionComponent, AccordionComponentProps } from './accordion';
 
-const mockedProps: AccordionProps = {
+const mockedProps: AccordionComponentProps = {
   i: faker.random.number(),
   expanded: false,
   onExpand: jest.fn(),
@@ -15,16 +15,16 @@ const mockedProps: AccordionProps = {
 
 const testId = 'accordion-component';
 
-const setup = (props: Partial<AccordionProps> = {}) => {
+const setup = (props: Partial<AccordionComponentProps> = {}) => {
   const setupProps = { ...mockedProps, ...props };
   return render(
-    <Accordion data-testid={testId} {...setupProps}>
+    <AccordionComponent data-testid={testId} {...setupProps}>
       <MockComponent />
-    </Accordion>,
+    </AccordionComponent>,
   );
 };
 
-describe('<Accordion />', () => {
+describe('<AccordionComponent />', () => {
   it('should render without error', () => {
     setup();
     const accordion = screen.getByTestId(testId);
