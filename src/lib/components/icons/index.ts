@@ -9,3 +9,4 @@ export * from './logout';
 export * from './hospital';
 export * from './add';
 export * from './bell';
+export * from './calendar';
