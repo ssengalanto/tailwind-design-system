@@ -15,3 +15,4 @@ export * from './clock';
 export * from './edit';
 export * from './email';
 export * from './female';
+export * from './password';
