@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { Avatar, Button, Card, TextField, Modal, FormControl } from 'lib/components/ui';
+import { Avatar, Button, Card, Dropdown } from 'lib/components/ui';
 import { useTheme, setDarkTheme, setLightTheme } from 'context';
 import { Accordion } from 'lib/components/ui/accordion';
 
@@ -61,7 +61,7 @@ export const App: React.FC = () => {
           <Button variant="danger" size="sm" onClick={toggleTheme}>
             Toggle Theme
           </Button>
-          <div className="mt-8">
+          {/* <div className="mt-8">
             <Button size="sm" onClick={() => setOpen(true)}>
               Open
             </Button>
@@ -73,8 +73,14 @@ export const App: React.FC = () => {
                 <TextField type="password" />
               </FormControl>
             </Modal>
-          </div>
+          </div> */}
           <Accordion data={data} />
+          <div className="relative">
+            <Button onClick={() => setOpen(true)}>dropdown</Button>
+            <Dropdown open={open} onClose={() => setOpen(false)} align="left">
+              hello
+            </Dropdown>
+          </div>
         </Card>
       </div>
     </div>

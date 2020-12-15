@@ -9,3 +9,4 @@ export * from './checkbox';
 export * from './text-area';
 export * from './modal';
 export * from './form-control';
+export * from './dropdown';
