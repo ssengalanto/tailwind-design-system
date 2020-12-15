@@ -11,10 +11,12 @@ const mockedProps: ModalProps = {
   onClose: jest.fn(),
 };
 
+const testId = 'modal-component';
+
 const setup = (props: Partial<ModalProps> = {}) => {
   const setupProps = { ...mockedProps, ...props };
   return render(
-    <Modal {...setupProps}>
+    <Modal data-testid={testId} {...setupProps}>
       <MockComponent />
     </Modal>,
   );
@@ -27,7 +29,7 @@ describe('<Modal />', () => {
 
   it('props { open: true }', () => {
     setup({ open: true });
-    const modal = screen.getByRole('dialog');
+    const modal = screen.getByTestId(testId);
     const mockComponent = screen.getByTestId(mockComponentTestId);
 
     expect(modal).toBeInTheDocument();
@@ -35,7 +37,7 @@ describe('<Modal />', () => {
   });
 
   it('props { open: false }', () => {
-    const modal = screen.queryByRole('dialog');
+    const modal = screen.queryByTestId(testId);
     expect(modal).not.toBeInTheDocument();
   });
 });

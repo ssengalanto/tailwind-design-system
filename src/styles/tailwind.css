@@ -11,6 +11,14 @@
     @apply text-primary-500 dark:text-primary-200;
   }
 
+  .text-base-success {
+    @apply text-green-500 dark:text-green-400;
+  }
+
+  .text-base-warn {
+    @apply text-yellow-500 dark:text-yellow-400;
+  }
+
   .text-base-error {
     @apply text-red-600 dark:text-red-400;
   }

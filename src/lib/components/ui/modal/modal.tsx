@@ -63,13 +63,7 @@ const Modal = React.forwardRef<HTMLDivElement, ModalProps>(function Modal(
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0 }}
             >
-              <Card
-                role="dialog"
-                onClick={(e) => e.stopPropagation()}
-                className={classes}
-                ref={ref}
-                {...props}
-              >
+              <Card onClick={(e) => e.stopPropagation()} className={classes} ref={ref} {...props}>
                 <FocusLock returnFocus>{children}</FocusLock>
               </Card>
             </motion.div>

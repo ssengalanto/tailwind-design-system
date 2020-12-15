@@ -12,7 +12,7 @@ export default {
   argTypes: {},
 } as Meta;
 
-const Template: Story<IconButtonProps> = ({ icon = <Search variant="inverse" />, ...args }) => (
+const Template: Story<IconButtonProps> = ({ icon = <Search white />, ...args }) => (
   <IconButton icon={icon} {...args} />
 );
 

@@ -69,6 +69,6 @@ describe('<IconButton />', () => {
     const icon = screen.getByTestId('search-icon');
     const button = screen.getByRole('button');
     expect(button).toHaveClass(styles.disabled);
-    expect(icon).toHaveClass(svgIconStyles.variant.default);
+    expect(icon).toHaveClass(svgIconStyles.default);
   });
 });

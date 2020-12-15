@@ -35,13 +35,6 @@ describe('<SvgIcon />', () => {
     expect(svgPath).toBeInTheDocument();
   });
 
-  it('props { variant: "default" }', () => {
-    setup({ variant: 'default' });
-    const svg = screen.getByTestId(testId);
-
-    expect(svg).toHaveClass(styles.variant.default);
-  });
-
   it('props { variant: "primary" }', () => {
     setup({ variant: 'primary' });
     const svg = screen.getByTestId(testId);
@@ -49,11 +42,32 @@ describe('<SvgIcon />', () => {
     expect(svg).toHaveClass(styles.variant.primary);
   });
 
-  it('props { variant: "inverse" }', () => {
-    setup({ variant: 'inverse' });
+  it('props { variant: "success" }', () => {
+    setup({ variant: 'success' });
     const svg = screen.getByTestId(testId);
 
-    expect(svg).toHaveClass(styles.variant.inverse);
+    expect(svg).toHaveClass(styles.variant.success);
+  });
+
+  it('props { variant: "warn" }', () => {
+    setup({ variant: 'warn' });
+    const svg = screen.getByTestId(testId);
+
+    expect(svg).toHaveClass(styles.variant.warn);
+  });
+
+  it('props { variant: "error" }', () => {
+    setup({ variant: 'error' });
+    const svg = screen.getByTestId(testId);
+
+    expect(svg).toHaveClass(styles.variant.error);
+  });
+
+  it('props { white: true }', () => {
+    setup({ white: true });
+    const svg = screen.getByTestId(testId);
+
+    expect(svg).toHaveClass(styles.white);
   });
 
   it('props { size: "sm" }', () => {

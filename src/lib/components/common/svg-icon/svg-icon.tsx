@@ -3,11 +3,14 @@ import clsx from 'clsx';
 
 export const styles = {
   base: 'fill-current',
+  default: 'text-base',
   variant: {
-    default: 'text-base',
     primary: 'text-base-primary',
-    inverse: 'text-white',
+    success: 'text-base-success',
+    warn: 'text-base-warn',
+    error: 'text-base-error',
   },
+  white: 'text-white',
   size: {
     xs: 'h4 w-4',
     sm: 'h-5 w-5',
@@ -25,14 +28,20 @@ export interface SvgIconProps extends React.ComponentPropsWithoutRef<'svg'> {
    * Defines variant of the icon
    */
   variant?: keyof typeof styles.variant;
+  /**
+   * Changes the font color to white
+   */
+  white?: boolean;
 }
 
 const SvgIcon = React.forwardRef<SVGSVGElement, SvgIconProps>(
-  (
-    { children, viewBox = '0 0 24 24', className, size = 'sm', variant = 'default', ...props },
-    ref,
-  ) => {
-    const classes = clsx(styles.base, styles.size[size], styles.variant[variant], className);
+  ({ children, viewBox = '0 0 24 24', className, size = 'sm', variant, white, ...props }, ref) => {
+    const classes = clsx(
+      styles.base,
+      styles.size[size],
+      white ? styles.white : variant ? styles.variant[variant] : styles.default,
+      className,
+    );
 
     return (
       <svg className={classes} ref={ref} viewBox={viewBox} {...props}>

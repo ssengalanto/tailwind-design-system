@@ -21,6 +21,7 @@
     "import/named": "off",
     "no-use-before-define": "off",
     "no-param-reassign": "off",
+    "no-nested-ternary": "off",
     "no-shadow": "off",
     "default-case": "off",
     "import/extensions": "off",

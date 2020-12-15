@@ -61,7 +61,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(function
     <button ref={ref} type={type} disabled={disabled} className={classes} {...props}>
       {React.cloneElement(icon, {
         size,
-        variant: disabled ? 'default' : icon.props.variant,
+        variant: disabled ? undefined : icon.props.variant,
       })}
     </button>
   );
