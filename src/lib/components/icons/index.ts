@@ -8,3 +8,4 @@ export * from './user';
 export * from './logout';
 export * from './hospital';
 export * from './add';
+export * from './bell';
