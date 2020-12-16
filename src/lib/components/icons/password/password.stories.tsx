@@ -40,7 +40,7 @@ Warn.args = {
 
 export const Error = Template.bind({});
 Error.args = {
-  variant: 'error',
+  variant: 'danger',
 };
 
 export const White = Template.bind({});

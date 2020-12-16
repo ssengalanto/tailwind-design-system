@@ -56,11 +56,11 @@ describe('<SvgIcon />', () => {
     expect(svg).toHaveClass(styles.variant.warn);
   });
 
-  it('props { variant: "error" }', () => {
-    setup({ variant: 'error' });
+  it('props { variant: "danger" }', () => {
+    setup({ variant: 'danger' });
     const svg = screen.getByTestId(testId);
 
-    expect(svg).toHaveClass(styles.variant.error);
+    expect(svg).toHaveClass(styles.variant.danger);
   });
 
   it('props { white: true }', () => {

@@ -8,7 +8,7 @@ export const styles = {
     primary: 'text-base-primary',
     success: 'text-base-success',
     warn: 'text-base-warn',
-    error: 'text-base-error',
+    danger: 'text-base-danger',
   },
   white: 'text-white',
   size: {

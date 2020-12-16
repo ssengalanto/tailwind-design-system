@@ -14,7 +14,7 @@ export interface HelperTextProps extends React.HTMLAttributes<HTMLSpanElement> {
 
 export const styles = {
   base: 'text-xs text-base',
-  error: 'text-base-error',
+  error: 'text-base-danger',
   disabled: 'opacity-50',
 };
 
