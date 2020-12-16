@@ -1,12 +1,29 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
-import { Avatar, Button, Card, Dropdown } from 'lib/components/ui';
+import {
+  Avatar,
+  Button,
+  Card,
+  Dropdown,
+  DropdownItem,
+  FormControl,
+  Modal,
+  TextField,
+} from 'lib/components/ui';
 import { useTheme, setDarkTheme, setLightTheme } from 'context';
 import { Accordion } from 'lib/components/ui/accordion';
+import { useToggle } from 'lib/hooks';
 
 export const App: React.FC = () => {
   const [{ theme }, dispatch] = useTheme();
-  const [open, setOpen] = useState(false);
+  const {
+    models: { open },
+    operations: { handleToggle, handleClose },
+  } = useToggle();
+  const {
+    models: { open: modalOpen },
+    operations: { handleOpen: handleOpenModal, handleClose: handleCloseModal },
+  } = useToggle();
 
   useEffect(() => {
     if (theme === 'light') {
@@ -61,11 +78,11 @@ export const App: React.FC = () => {
           <Button variant="danger" size="sm" onClick={toggleTheme}>
             Toggle Theme
           </Button>
-          {/* <div className="mt-8">
-            <Button size="sm" onClick={() => setOpen(true)}>
+          <div className="mt-8">
+            <Button size="sm" onClick={handleOpenModal}>
               Open
             </Button>
-            <Modal open={open} onClose={() => setOpen(false)}>
+            <Modal open={modalOpen} onClose={handleCloseModal}>
               <FormControl label="Email Address">
                 <TextField />
               </FormControl>
@@ -73,12 +90,13 @@ export const App: React.FC = () => {
                 <TextField type="password" />
               </FormControl>
             </Modal>
-          </div> */}
+          </div>
           <Accordion data={data} />
           <div className="relative">
-            <Button onClick={() => setOpen(true)}>dropdown</Button>
-            <Dropdown open={open} onClose={() => setOpen(false)} align="left">
-              hello
+            <Button onClick={handleToggle}>dropdown</Button>
+            <Dropdown open={open} onClose={handleClose} align="left">
+              <DropdownItem>hello</DropdownItem>
+              <DropdownItem>hi</DropdownItem>
             </Dropdown>
           </div>
         </Card>

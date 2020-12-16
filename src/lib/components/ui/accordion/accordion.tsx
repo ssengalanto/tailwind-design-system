@@ -100,7 +100,7 @@ const Accordion: React.FC<AccordionProps> = ({ data }) => {
   return (
     <div role="presentation">
       {data.map(({ id, title, content }) => (
-        <AccordionComponent i={id} expanded={current} header={title} onExpand={setCurrent}>
+        <AccordionComponent key={id} i={id} expanded={current} header={title} onExpand={setCurrent}>
           {content}
         </AccordionComponent>
       ))}
