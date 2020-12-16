@@ -2,7 +2,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import Badge, { BadgeProps } from './badge';
+import { Badge, BadgeProps } from './badge';
 
 export default {
   title: 'UI/Badge',

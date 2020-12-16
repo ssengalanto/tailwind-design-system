@@ -5,7 +5,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { SvgIconProps } from 'lib/components/common';
 import { IconButton } from 'lib/components/ui/icon-button';
 
-import Calendar from './calendar';
+import { Calendar } from './calendar';
 
 export default {
   title: 'Icons/Calendar',

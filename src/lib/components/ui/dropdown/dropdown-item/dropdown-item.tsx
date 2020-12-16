@@ -9,19 +9,18 @@ export const styles = {
 
 export interface DropdownItemProps extends React.HTMLAttributes<HTMLButtonElement> {}
 
-const DropdownItem = React.forwardRef<HTMLButtonElement, DropdownItemProps>(function DropdownItem(
-  { className, children, ...props },
-  ref,
-) {
-  const classes = clsx(styles.base, className);
+export const DropdownItem = React.forwardRef<HTMLButtonElement, DropdownItemProps>(
+  function DropdownItem({ className, children, ...props }, ref) {
+    const classes = clsx(styles.base, className);
 
-  return (
-    <li className={styles.list}>
-      <button className={classes} type="button" ref={ref} {...props}>
-        {children}
-      </button>
-    </li>
-  );
-});
+    return (
+      <li className={styles.list}>
+        <button className={classes} type="button" ref={ref} {...props}>
+          {children}
+        </button>
+      </li>
+    );
+  },
+);
 
 export default DropdownItem;

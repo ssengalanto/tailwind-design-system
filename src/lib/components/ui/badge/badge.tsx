@@ -19,7 +19,7 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
   variant?: keyof typeof styles.variant;
 }
 
-const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(function Badge(
+export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(function Badge(
   { className, children, variant = 'primary', ...props },
   ref,
 ) {

@@ -8,7 +8,7 @@ export const styles = {
   default: 'bg-white dark:bg-gray-800',
 };
 
-const Card = React.forwardRef<HTMLDivElement, CardProps>(function Card(
+export const Card = React.forwardRef<HTMLDivElement, CardProps>(function Card(
   { className, ...props },
   ref,
 ) {

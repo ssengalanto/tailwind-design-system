@@ -18,7 +18,7 @@ export const styles = {
   error: 'border-red-500 dark:bg-gray-700 focus:border-red-400  focus:ring-red-200 f',
 };
 
-const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
+export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
   ({ type = 'text', error, disabled, className, required, ...props }, ref) => {
     const classes = clsx(
       styles.base,

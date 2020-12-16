@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { Search } from 'lib/components/icons';
 
-import IconButton, { IconButtonProps } from './icon-button';
+import { IconButton, IconButtonProps } from './icon-button';
 
 export default {
   title: 'UI/IconButton',

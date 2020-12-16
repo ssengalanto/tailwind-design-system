@@ -2,7 +2,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import Label, { LabelProps } from './label';
+import { Label, LabelProps } from './label';
 import { TextField } from '../text-field';
 import { Checkbox } from '../checkbox';
 

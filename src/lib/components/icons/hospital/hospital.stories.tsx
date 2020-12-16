@@ -5,7 +5,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { SvgIconProps } from 'lib/components/common';
 import { IconButton } from 'lib/components/ui/icon-button';
 
-import Hospital from './hospital';
+import { Hospital } from './hospital';
 
 export default {
   title: 'Icons/Hospital',

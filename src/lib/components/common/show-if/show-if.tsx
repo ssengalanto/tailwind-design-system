@@ -5,7 +5,7 @@ export interface ShowIfProps {
   fallback?: JSX.Element;
 }
 
-const ShowIf: React.FC<ShowIfProps> = ({ condition, children, fallback }) => (
+export const ShowIf: React.FC<ShowIfProps> = ({ condition, children, fallback }) => (
   <>{condition ? children : fallback ?? null}</>
 );
 

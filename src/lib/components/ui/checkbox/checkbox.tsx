@@ -24,7 +24,7 @@ export const styles = {
   error: 'border-red-500 dark:border-red-400 text-red-500 focus:ring-red-200 focus:border-red-300',
 };
 
-const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
+export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   ({ disabled, label, className, error, ...props }, ref) => {
     const classes = clsx(styles.base, error ? styles.error : styles.default, className);
     return (

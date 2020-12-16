@@ -24,7 +24,7 @@ export interface ModalProps extends CardProps {
   open: boolean;
 }
 
-const Modal = React.forwardRef<HTMLDivElement, ModalProps>(function Modal(
+export const Modal = React.forwardRef<HTMLDivElement, ModalProps>(function Modal(
   { onClose, open, children, className, ...props },
   ref,
 ) {

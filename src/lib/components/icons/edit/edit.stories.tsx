@@ -5,7 +5,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { SvgIconProps } from 'lib/components/common';
 import { IconButton } from 'lib/components/ui/icon-button';
 
-import Edit from './edit';
+import { Edit } from './edit';
 
 export default {
   title: 'Icons/Edit',

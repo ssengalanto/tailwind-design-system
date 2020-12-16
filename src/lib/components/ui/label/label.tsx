@@ -31,7 +31,7 @@ export const styles = {
   error: 'text-red-500 dark:text-red-400',
 };
 
-const Label = React.forwardRef<HTMLLabelElement, LabelProps>(function Label(
+export const Label = React.forwardRef<HTMLLabelElement, LabelProps>(function Label(
   { children, className, inline, disabled, error, label, required, ...props },
   ref,
 ) {

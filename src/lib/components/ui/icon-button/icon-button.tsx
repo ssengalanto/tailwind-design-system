@@ -37,7 +37,7 @@ export interface IconButtonProps
   icon: React.ReactElement<React.ComponentProps<typeof SvgIcon>>;
 }
 
-const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(function Button(
+export const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(function Button(
   {
     size = 'xs',
     type = 'button',

@@ -3,7 +3,7 @@ import React from 'react';
 import faker from 'faker';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import Avatar, { AvatarProps } from './avatar';
+import { Avatar, AvatarProps } from './avatar';
 
 export default {
   title: 'UI/Avatar',

@@ -34,7 +34,7 @@ export interface SvgIconProps extends React.ComponentPropsWithoutRef<'svg'> {
   white?: boolean;
 }
 
-const SvgIcon = React.forwardRef<SVGSVGElement, SvgIconProps>(
+export const SvgIcon = React.forwardRef<SVGSVGElement, SvgIconProps>(
   ({ children, viewBox = '0 0 24 24', className, size = 'sm', variant, white, ...props }, ref) => {
     const classes = clsx(
       styles.base,

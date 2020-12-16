@@ -18,7 +18,7 @@ export const styles = {
   disabled: 'opacity-50',
 };
 
-const HelperText = React.forwardRef<HTMLSpanElement, HelperTextProps>(function HelperText(
+export const HelperText = React.forwardRef<HTMLSpanElement, HelperTextProps>(function HelperText(
   { className, error, disabled, ...props },
   ref,
 ) {

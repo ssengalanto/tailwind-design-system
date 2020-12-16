@@ -2,7 +2,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import HelperText, { HelperTextProps } from './helper-text';
+import { HelperText, HelperTextProps } from './helper-text';
 
 export default {
   title: 'UI/HelperText',

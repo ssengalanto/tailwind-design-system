@@ -94,7 +94,7 @@ export interface AccordionProps {
   }[];
 }
 
-const Accordion: React.FC<AccordionProps> = ({ data }) => {
+export const Accordion: React.FC<AccordionProps> = ({ data }) => {
   const [current, setCurrent] = useState<number | boolean>(false);
 
   return (

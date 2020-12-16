@@ -35,7 +35,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   fullWidth?: boolean;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function Button(
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   {
     children,
     size = 'md',

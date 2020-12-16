@@ -2,7 +2,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import Card, { CardProps } from './card';
+import { Card, CardProps } from './card';
 
 export default {
   title: 'UI/Card',

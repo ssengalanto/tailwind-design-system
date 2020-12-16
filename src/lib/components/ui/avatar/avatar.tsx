@@ -25,7 +25,7 @@ export interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
   src: string;
 }
 
-const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(function Avatar(
+export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(function Avatar(
   { className, src, alt, size = 'md', ...props },
   ref,
 ) {

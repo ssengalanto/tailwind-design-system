@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import clsx from 'clsx';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import Dropdown, { DropdownProps } from './dropdown';
+import { Dropdown, DropdownProps } from './dropdown';
 import { DropdownItem } from './dropdown-item';
 import { Button } from '../button';
 

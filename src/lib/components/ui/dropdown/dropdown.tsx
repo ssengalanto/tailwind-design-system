@@ -35,7 +35,7 @@ export interface DropdownProps extends React.HTMLAttributes<HTMLUListElement> {
     | Array<React.ReactElement<React.ComponentProps<typeof DropdownItem>>>;
 }
 
-const Dropdown = React.forwardRef<HTMLDivElement, DropdownProps>(function Dropdown(
+export const Dropdown = React.forwardRef<HTMLDivElement, DropdownProps>(function Dropdown(
   { children, className, open, onClose, align = 'right', ...props },
   ref,
 ) {

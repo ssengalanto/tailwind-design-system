@@ -12,3 +12,4 @@ export * from './form-control';
 export * from './dropdown';
 export * from './accordion';
 export * from './badge';
+export * from './skeleton';
