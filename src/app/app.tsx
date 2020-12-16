@@ -9,6 +9,7 @@ import {
   FormControl,
   Modal,
   TextField,
+  Badge,
   Accordion,
 } from 'lib/components/ui';
 import { useTheme, setDarkTheme, setLightTheme } from 'context';
@@ -63,6 +64,7 @@ export const App: React.FC = () => {
     <div className="container h-screen mx-auto">
       <div className="flex justify-center align-middle">
         <Card className="max-w-lg p-10 mt-6">
+          <Badge>23</Badge>
           <div className="flex items-center mb-8">
             <div>
               <Avatar
