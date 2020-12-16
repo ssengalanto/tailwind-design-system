@@ -10,4 +10,4 @@ export * from './text-area';
 export * from './modal';
 export * from './form-control';
 export * from './dropdown';
-export * from './dropdown-item';
+export * from './accordion';

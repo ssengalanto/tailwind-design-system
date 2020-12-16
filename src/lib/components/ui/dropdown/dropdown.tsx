@@ -3,6 +3,8 @@ import clsx from 'clsx';
 import FocusLock from 'react-focus-lock';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import { DropdownItem } from './dropdown-item';
+
 export const styles = {
   base:
     'absolute w-56 p-2 mt-2 text-gray-600 bg-white border border-gray-100 rounded-lg shadow-md min-w-max-content dark:text-gray-300 dark:border-gray-700 dark:bg-gray-700',
@@ -25,6 +27,12 @@ export interface DropdownProps extends React.HTMLAttributes<HTMLUListElement> {
    * Defines the alignement of the dropdown related to its parent
    */
   align?: keyof typeof styles.align;
+  /**
+   * Defines that the children should type of DropdownItem
+   */
+  children:
+    | React.ReactElement<React.ComponentProps<typeof DropdownItem>>
+    | Array<React.ReactElement<React.ComponentProps<typeof DropdownItem>>>;
 }
 
 const Dropdown = React.forwardRef<HTMLDivElement, DropdownProps>(function Dropdown(

@@ -9,9 +9,9 @@ import {
   FormControl,
   Modal,
   TextField,
+  Accordion,
 } from 'lib/components/ui';
 import { useTheme, setDarkTheme, setLightTheme } from 'context';
-import { Accordion } from 'lib/components/ui/accordion';
 import { useToggle } from 'lib/hooks';
 
 export const App: React.FC = () => {
