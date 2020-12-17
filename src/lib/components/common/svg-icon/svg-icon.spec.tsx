@@ -35,6 +35,13 @@ describe('<SvgIcon />', () => {
     expect(svgPath).toBeInTheDocument();
   });
 
+  it('props { variant: "inherit" }', () => {
+    setup({ variant: 'inherit' });
+    const svg = screen.getByTestId(testId);
+
+    expect(svg).toHaveClass(styles.variant.inherit);
+  });
+
   it('props { variant: "primary" }', () => {
     setup({ variant: 'primary' });
     const svg = screen.getByTestId(testId);
