@@ -9,7 +9,7 @@ export const styles = {
     warn: 'text-base-warn hover:text-yellow-600 dark:hover:text-yellow-200',
     danger: 'text-base-danger hover:text-red-600 dark:hover:text-red-300',
   },
-  underline: 'underline',
+  underlined: 'underline',
 };
 
 export interface AnchorProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -20,17 +20,18 @@ export interface AnchorProps extends React.AnchorHTMLAttributes<HTMLAnchorElemen
   /**
    * Defines the underline prop of the anchor
    */
-  underline?: boolean;
+  underlined?: boolean;
 }
 
+// TODO: improve accessibility
 export const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProps>(function Anchor(
-  { className, children, underline, variant = 'primary', ...props },
+  { className, children, underlined, variant = 'primary', ...props },
   ref,
 ) {
   const classes = clsx(
     styles.base,
     styles.variant[variant],
-    { [styles.underline]: underline },
+    { [styles.underlined]: underlined },
     className,
   );
 
