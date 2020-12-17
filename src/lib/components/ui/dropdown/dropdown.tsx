@@ -28,7 +28,7 @@ export interface DropdownProps extends React.HTMLAttributes<HTMLUListElement> {
    */
   align?: keyof typeof styles.align;
   /**
-   * Defines that the children should type of DropdownItem
+   * Defines that the children should be type of DropdownItem
    */
   children:
     | React.ReactElement<React.ComponentProps<typeof DropdownItem>>

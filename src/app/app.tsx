@@ -12,9 +12,12 @@ import {
   Badge,
   Accordion,
   Anchor,
+  Menu,
+  MenuItem,
 } from 'lib/components/ui';
 import { useTheme, setDarkTheme, setLightTheme } from 'context';
 import { useToggle } from 'lib/hooks';
+import { Home, Email } from 'lib/components/icons';
 
 export const App: React.FC = () => {
   const [{ theme }, dispatch] = useTheme();
@@ -107,6 +110,10 @@ export const App: React.FC = () => {
               <DropdownItem>hi</DropdownItem>
             </Dropdown>
           </div>
+          <Menu title="Dashboard" className="mt-5">
+            <MenuItem active icon={<Home />} label="Home" />
+            <MenuItem icon={<Email />} label="Email" />
+          </Menu>
         </Card>
       </div>
     </div>

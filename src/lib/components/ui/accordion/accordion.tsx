@@ -47,9 +47,7 @@ export const AccordionComponent = React.forwardRef<HTMLButtonElement, AccordionC
             ref={ref}
             {...props}
           >
-            <div className="pr-1">
-              {isOpen ? <ChevronDown variant="primary" /> : <ChevronRight variant="primary" />}
-            </div>
+            <div className="pr-1">{isOpen ? <ChevronDown /> : <ChevronRight />}</div>
             {header}
           </button>
         </motion.div>

@@ -14,5 +14,5 @@ const Template: Story<CardProps> = (args) => <Card {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  children: <p className="text-base">your card content</p>,
+  children: <p className="text-base-default">your card content</p>,
 };

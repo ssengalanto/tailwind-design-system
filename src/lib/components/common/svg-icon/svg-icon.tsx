@@ -3,9 +3,10 @@ import clsx from 'clsx';
 
 export const styles = {
   base: 'fill-current',
-  default: 'text-base',
+  default: 'text-base-default',
   variant: {
-    primary: 'text-primary-500 dark:text-primary-200',
+    inherit: 'fill-current',
+    primary: 'text-base-primary',
     success: 'text-base-success',
     warn: 'text-base-warn',
     danger: 'text-base-danger',
@@ -35,7 +36,7 @@ export interface SvgIconProps extends React.ComponentPropsWithoutRef<'svg'> {
 }
 
 export const SvgIcon = React.forwardRef<SVGSVGElement, SvgIconProps>(
-  ({ children, viewBox = '0 0 24 24', className, size = 'sm', variant, white, ...props }, ref) => {
+  ({ children, viewBox = '0 0 24 24', className, size = 'xs', variant, white, ...props }, ref) => {
     const classes = clsx(
       styles.base,
       styles.size[size],

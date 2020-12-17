@@ -14,6 +14,6 @@ const Template: Story<ModalProps> = (args) => <Modal {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  children: <p className="text-base">your modal content</p>,
+  children: <p className="text-base-default">your modal content</p>,
   open: true,
 };
