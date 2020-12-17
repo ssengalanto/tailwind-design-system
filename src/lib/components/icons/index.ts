@@ -17,3 +17,5 @@ export * from './email';
 export * from './female';
 export * from './password';
 export * from './male';
+export * from './sun';
+export * from './moon';
