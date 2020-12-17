@@ -7,7 +7,7 @@ import { IconButton } from '../src/lib/components/ui';
 import { Sun, Moon } from '../src/lib/components/icons';
 
 const Theme = (Story) => {
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
     if (theme === 'light') {
