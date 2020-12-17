@@ -11,6 +11,7 @@ import {
   TextField,
   Badge,
   Accordion,
+  Anchor,
 } from 'lib/components/ui';
 import { useTheme, setDarkTheme, setLightTheme } from 'context';
 import { useToggle } from 'lib/hooks';
@@ -65,6 +66,11 @@ export const App: React.FC = () => {
       <div className="flex justify-center align-middle">
         <Card className="max-w-lg p-10 mt-6">
           <Badge>23</Badge>
+          <div>
+            <Anchor href="https://www.ssengalanto.com/" target="_blank">
+              ssengalanto
+            </Anchor>
+          </div>
           <div className="flex items-center mb-8">
             <div>
               <Avatar

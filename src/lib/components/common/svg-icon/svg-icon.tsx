@@ -5,7 +5,7 @@ export const styles = {
   base: 'fill-current',
   default: 'text-base',
   variant: {
-    primary: 'text-base-primary',
+    primary: 'text-primary-500 dark:text-primary-200',
     success: 'text-base-success',
     warn: 'text-base-warn',
     danger: 'text-base-danger',

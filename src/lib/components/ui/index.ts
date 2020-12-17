@@ -13,3 +13,4 @@ export * from './dropdown';
 export * from './accordion';
 export * from './badge';
 export * from './skeleton';
+export * from './anchor';
